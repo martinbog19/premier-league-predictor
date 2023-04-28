@@ -96,6 +96,8 @@ class scraper:
 
         # Finally, concatenate all seasons together
         DATA = pd.concat(yearly_data)
+        # Create output matrix
+        DATA = pd.concat([DATA, pd.get_dummies(DATA['Result'].replace(1,'Win').replace(0,'Draw').replace(-1,'Loss'))], axis = 1)
         DATA = DATA.sort_values('Date').reset_index(drop = True)
 
         return DATA
