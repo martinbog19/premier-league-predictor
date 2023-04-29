@@ -12,12 +12,13 @@ class scraper:
         self.years = years
 
 
-    def fit(self, windows = [1, 2, 5, 10]) :
+    def fit(self, windows = [1, 2, 5, 10], verbose = True) :
 
         yearly_data = []
         for i, year in enumerate(self.years) :
-
-            print(f'... {year-1}-{year} ...  ({i+1}/{len(self.years)}) ...')
+            
+            if verbose :
+                print(f'... {year-1}-{year} ...  ({i+1}/{len(self.years)}) ...')
 
             # Scrape looped year's schedule
             url = f'https://fbref.com/en/comps/9/{year-1}-{year}/schedule/'
@@ -25,11 +26,11 @@ class scraper:
             while soup.find('tr', class_ = 'thead') is not None: # Decompose all headers
                 soup.find('tr', class_ = 'thead').decompose()
             data = pd.read_html(str(soup.find('table')))[0] # Read table in a dataframe
-            data = data[data['Score'].notna()] # Remove headers
+            data = data[data['Home'].notna()] # Remove headers
             data = data[['Date', 'Home', 'Away', 'Score']] # Only keep necessary columns
             data['Date'] = pd.to_datetime(data['Date']) # Turn dates into datetime format
-            data['G_home'] = data['Score'].apply(lambda x: str(x).split('–')[0]).astype(int)  # Set home goals
-            data['G_away'] = data['Score'].apply(lambda x: str(x).split('–')[-1]).astype(int) # Set away goals
+            data['G_home'] = data['Score'].apply(lambda x: int(str(x).split('–')[0])  if (np.all(pd.notnull(x))) else x) # Set home goals
+            data['G_away'] = data['Score'].apply(lambda x: int(str(x).split('–')[-1]) if (np.all(pd.notnull(x))) else x) # Set away goals
 
             # Create list of teams competing this season
             teams = sorted(list(set(data['Home'])))
@@ -92,7 +93,9 @@ class scraper:
             games = games[['Date', 'Season', 'Game_home', 'Game_away','Home', 'Away', 'Result', 'G_home', 'G_away'] + self.features]
             # Append games to the list of yearly games
             yearly_data.append(games)
-            clear_output(wait = True)
+            
+            if verbose :
+                clear_output(wait = True)
 
         # Finally, concatenate all seasons together
         DATA = pd.concat(yearly_data)
