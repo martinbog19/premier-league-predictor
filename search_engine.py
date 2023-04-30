@@ -24,7 +24,7 @@ def search(query) :
 
     # If max similarity is near perfect, assign the competition
     elif res['similarity'][0] > 0.99 :
-        print(res['Competition'][0], res['CODE'][0])
+        print(f"{res['Competition'][0]} ({res['Country'][0]})")
         output, flag = res.head(1), True
 
     # If max similarity is between the two, ask for confirmation to the user
