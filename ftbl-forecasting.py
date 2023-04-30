@@ -1,6 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from search_engine import search
+from email_results import send
 from scraping import scraper
 from datetime import datetime, timedelta
 from train import training, loading
@@ -47,10 +48,14 @@ if flag :
         preds = model.predict(X_pred, verbose = 0)
         games['PRED.'] = list(pd.Series(np.argmax(preds, axis = 1)).replace(0, 'HOME').replace(1, 'DRAW').replace(2, 'AWAY'))
         games[['HOME_W', 'DRAW', 'AWAY_W']] = np.round(preds / preds.sum(axis = 1)[:, None], 2)
-        games = games[['Date', 'Home', 'Away', 'PRED.', 'HOME_W', 'DRAW', 'AWAY_W']].rename(columns = {'Date':'DATE', 'Home':'HOME', 'Away':'AWAY'}).set_index('DATE')
+        games = games[['Date', 'Home', 'Away', 'PRED.', 'HOME_W', 'DRAW', 'AWAY_W']].rename(columns = {'Date':'DATE', 'Home':'HOME', 'Away':'AWAY'})
 
+        # Send by email
+        subject = f'{name.upper()} ({country.upper()}) PREDICTIONS ({games["DATE"].min().strftime("%d %b")} - {games["DATE"].max().strftime("%d %b")})\n'
+       # send(games, subject)
+        
         # Print the results
         print('\n')
-        print(f'{name.upper()} ({country.upper()}) PREDICTIONS ({games.index.min().strftime("%d %b")} - {games.index.max().strftime("%d %b")})\n')
-        print(games)
+        print(subject)
+        print(games.set_index('DATE'))
         print('\n\n')
