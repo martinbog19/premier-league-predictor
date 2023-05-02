@@ -1,12 +1,6 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from search_engine import search
-from email_results import send
-from scraping import scraper
-from datetime import datetime, timedelta
-from train import training, loading
-import numpy as np
-import pandas as pd
 
 print('\n')
 # PART 1 :   Ask the user for a competition
@@ -14,15 +8,21 @@ query = input('Enter competition :   \n\t')
 comp, flag = search(query)
 print('\n')
 
+from email_results import send
+from scraping import scraper
+from datetime import datetime, timedelta
+from train import training, loading
+import numpy as np
+import pandas as pd
+
 
 if flag :
 
-    st, code, name, country, acyear = comp['First Season'][0], comp['CODE'][0], comp['Competition'][0], comp['Country'][0], comp['acyear'][0]
+    code, name, country = comp['CODE'][0], comp['Competition'][0], comp['Country'][0]
     # PART 2 :   Scrape games to be played in the next week
-    season = 2023
     print('Scraping next few games ...')
-    Scraper = scraper(years = [season], code = code)
-    games = Scraper.fit(verbose = False)
+    Scraper = scraper(code = code)
+    games = Scraper.fit_pred()
     # Keep games yet to be played between now and a week later
     now, then = datetime.today().strftime('%Y-%m-%d'), datetime.now() + timedelta(days = 7)
     games = games[(games['Date'] >= now) & (games['Date'] <= then)]
@@ -41,7 +41,7 @@ if flag :
             model = loading(code)
 
         except :  # If the model doesn't yet exist, train one and save it
-            model = training(code, st, acyear)
+            model = training(code)
 
         # Predict the result of the upcoming games and append the results to the dataframe
         X_pred = np.array(games[Scraper.features])

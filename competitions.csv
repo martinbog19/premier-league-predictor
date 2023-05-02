@@ -1,49 +1,49 @@
-Competition,title,Country,First Season,acyear,CODE
-Argentine Primera División,ARG argentine primera división,ARG,2014,False,21
-A-League Men,AUS a-league men,AUS,2006,True,65
-Austrian Football Bundesliga,AUT austrian football bundesliga,AUT,2004,True,56
-Belgian First Division A,BEL belgian first division a,BEL,2004,True,37
-División de Fútbol Profesional,BOL división de fútbol profesional,BOL,2015,True,74
-Campeonato Brasileiro Série A,BRA campeonato brasileiro série a,BRA,2014,False,24
-First Professional Football League,BUL first professional football league,BUL,2010,True,67
-Canadian Premier League,CAN canadian premier league,CAN,2019,False,211
-Chilean Primera División,CHI chilean primera división,CHI,2015,True,35
-Chinese Football Association Super League,CHN chinese football association super league,CHN,2014,False,62
-Categoría Primera A,COL categoría primera a,COL,2014,False,41
-Croatian First Football League,CRO croatian first football league,CRO,2008,True,63
-Czech First League,CZE czech first league,CZE,2010,True,66
-Superliga,DEN superliga,DEN,2004,True,50
-Liga Profesional Ecuador,ECU liga profesional ecuador,ECU,2014,False,58
-Premier League,ENG premier league,ENG,1889,True,9
-La Liga,ESP la liga,ESP,1989,True,12
-Veikkausliiga,FIN veikkausliiga,FIN,2003,False,43
-Ligue 1,FRA ligue 1,FRA,1996,True,13
-Fußball-Bundesliga,GER fußball-bundesliga,GER,1989,True,20
-Super League Greece,GRE super league greece,GRE,2001,True,27
-Nemzeti Bajnokság I,HUN nemzeti bajnokság i,HUN,2006,True,46
-Indian I-League,IND indian i-league,IND,2014,True,378
-Indian Super League,IND indian super league,IND,2014,False,82
-Persian Gulf Pro League,IRN persian gulf pro league,IRN,2015,True,64
-Serie A,ITA serie a,ITA,1989,True,11
-J1 League,JPN j1 league,JPN,2014,False,25
-K League 1,KOR k league 1,KOR,2014,False,55
-Saudi Professional League,KSA saudi professional league,KSA,2015,True,70
-Liga MX,MEX liga mx,MEX,2004,True,31
-Eredivisie,NED eredivisie,NED,2001,True,23
-Eliteserien,NOR eliteserien,NOR,2000,False,28
-Paraguayan Primera División,PAR paraguayan primera división,PAR,2014,False,61
-Liga 1 de Fútbol Profesional,PER liga 1 de fútbol profesional,PER,2014,False,44
-Ekstraklasa,POL ekstraklasa,POL,2003,True,36
-Primeira Liga,POR primeira liga,POR,2001,True,32
-Liga I,ROU liga i,ROU,2007,True,47
-South African Premier Division,RSA south african premier division,RSA,2015,True,52
-Russian Premier League,RUS russian premier league,RUS,2001,False,30
-Scottish Premiership,SCO scottish premiership,SCO,2001,True,40
-Serbian SuperLiga,SRB serbian superliga,SRB,2009,True,54
-Swiss Super League,SUI swiss super league,SUI,2004,True,57
-Allsvenskan,SWE allsvenskan,SWE,2001,False,29
-Süper Lig,TUR süper lig,TUR,2002,True,26
-Ukrainian Premier League,UKR ukrainian premier league,UKR,2004,True,39
-Uruguayan Primera División,URU uruguayan primera división,URU,2015,True,45
-Major League Soccer,USA major league soccer,USA,1996,False,22
-Venezuelan Primera División,VEN venezuelan primera división,VEN,2015,True,105
+Competition,title,Country,First Season,CODE,fs_href
+Argentine Primera División,ARG argentine primera división,ARG,2014,21,/en/comps/21/2014/2014-Primera-Division-Stats
+A-League Men,AUS a-league men,AUS,2006,65,/en/comps/65/2005-2006/2005-2006-A-League-Men-Stats
+Austrian Football Bundesliga,AUT austrian football bundesliga,AUT,2004,56,/en/comps/56/2003-2004/2003-2004-Austrian-Bundesliga-Stats
+Belgian First Division A,BEL belgian first division a,BEL,2004,37,/en/comps/37/2003-2004/2003-2004-Belgian-First-Division-A-Stats
+División de Fútbol Profesional,BOL división de fútbol profesional,BOL,2015,74,/en/comps/74/2014-2015/2014-2015-Primera-Division-Stats
+Campeonato Brasileiro Série A,BRA campeonato brasileiro série a,BRA,2014,24,/en/comps/24/2014/2014-Serie-A-Stats
+First Professional Football League,BUL first professional football league,BUL,2010,67,/en/comps/67/2009-2010/2009-2010-Bulgarian-First-League-Stats
+Canadian Premier League,CAN canadian premier league,CAN,2019,211,/en/comps/211/2019/2019-Canadian-Premier-League-Stats
+Chilean Primera División,CHI chilean primera división,CHI,2015,35,/en/comps/35/2014-2015/2014-2015-Primera-Division-Stats
+Chinese Football Association Super League,CHN chinese football association super league,CHN,2014,62,/en/comps/62/2014/2014-Chinese-Super-League-Stats
+Categoría Primera A,COL categoría primera a,COL,2014,41,/en/comps/41/2014/2014-Primera-A-Stats
+Croatian First Football League,CRO croatian first football league,CRO,2008,63,/en/comps/63/2007-2008/2007-2008-1-HNL-Stats
+Czech First League,CZE czech first league,CZE,2010,66,/en/comps/66/2009-2010/2009-2010-Czech-First-League-Stats
+Superliga,DEN superliga,DEN,2004,50,/en/comps/50/2003-2004/2003-2004-Superliga-Stats
+Liga Profesional Ecuador,ECU liga profesional ecuador,ECU,2014,58,/en/comps/58/2014/2014-Serie-A-Stats
+Premier League,ENG premier league,ENG,1889,9,/en/comps/9/1888-1889/1888-1889-Premier-League-Stats
+La Liga,ESP la liga,ESP,1989,12,/en/comps/12/1988-1989/1988-1989-La-Liga-Stats
+Veikkausliiga,FIN veikkausliiga,FIN,2003,43,/en/comps/43/2003/2003-Veikkausliiga-Stats
+Ligue 1,FRA ligue 1,FRA,1996,13,/en/comps/13/1995-1996/1995-1996-Ligue-1-Stats
+Fußball-Bundesliga,GER fußball-bundesliga,GER,1989,20,/en/comps/20/1988-1989/1988-1989-Bundesliga-Stats
+Super League Greece,GRE super league greece,GRE,2001,27,/en/comps/27/2000-2001/2000-2001-Super-League-Greece-Stats
+Nemzeti Bajnokság I,HUN nemzeti bajnokság i,HUN,2006,46,/en/comps/46/2005-2006/2005-2006-NB-I-Stats
+Indian I-League,IND indian i-league,IND,2014,378,/en/comps/378/2013-2014/2013-2014-I-League-Stats
+Indian Super League,IND indian super league,IND,2014,82,/en/comps/82/2014/2014-Indian-Super-League-Stats
+Persian Gulf Pro League,IRN persian gulf pro league,IRN,2015,64,/en/comps/64/2014-2015/2014-2015-Persian-Gulf-Pro-League-Stats
+Serie A,ITA serie a,ITA,1989,11,/en/comps/11/1988-1989/1988-1989-Serie-A-Stats
+J1 League,JPN j1 league,JPN,2014,25,/en/comps/25/2014/2014-J1-League-Stats
+K League 1,KOR k league 1,KOR,2014,55,/en/comps/55/2014/2014-K-League-1-Stats
+Saudi Professional League,KSA saudi professional league,KSA,2015,70,/en/comps/70/2014-2015/2014-2015-Saudi-Professional-League-Stats
+Liga MX,MEX liga mx,MEX,2004,31,/en/comps/31/2003-2004/2003-2004-Liga-MX-Stats
+Eredivisie,NED eredivisie,NED,2001,23,/en/comps/23/2000-2001/2000-2001-Eredivisie-Stats
+Eliteserien,NOR eliteserien,NOR,2000,28,/en/comps/28/2000/2000-Eliteserien-Stats
+Paraguayan Primera División,PAR paraguayan primera división,PAR,2014,61,/en/comps/61/2014/2014-Primera-Division-Stats
+Liga 1 de Fútbol Profesional,PER liga 1 de fútbol profesional,PER,2014,44,/en/comps/44/2014/2014-Liga-1-Stats
+Ekstraklasa,POL ekstraklasa,POL,2003,36,/en/comps/36/2002-2003/2002-2003-Ekstraklasa-Stats
+Primeira Liga,POR primeira liga,POR,2001,32,/en/comps/32/2000-2001/2000-2001-Primeira-Liga-Stats
+Liga I,ROU liga i,ROU,2007,47,/en/comps/47/2006-2007/2006-2007-Liga-I-Stats
+South African Premier Division,RSA south african premier division,RSA,2015,52,/en/comps/52/2014-2015/2014-2015-Premier-Division-Stats
+Russian Premier League,RUS russian premier league,RUS,2001,30,/en/comps/30/2001/2001-Russian-Premier-League-Stats
+Scottish Premiership,SCO scottish premiership,SCO,2001,40,/en/comps/40/2000-2001/2000-2001-Scottish-Premiership-Stats
+Serbian SuperLiga,SRB serbian superliga,SRB,2009,54,/en/comps/54/2008-2009/2008-2009-Serbian-SuperLiga-Stats
+Swiss Super League,SUI swiss super league,SUI,2004,57,/en/comps/57/2003-2004/2003-2004-Swiss-Super-League-Stats
+Allsvenskan,SWE allsvenskan,SWE,2001,29,/en/comps/29/2001/2001-Allsvenskan-Stats
+Süper Lig,TUR süper lig,TUR,2002,26,/en/comps/26/2001-2002/2001-2002-Super-Lig-Stats
+Ukrainian Premier League,UKR ukrainian premier league,UKR,2004,39,/en/comps/39/2003-2004/2003-2004-Ukrainian-Premier-League-Stats
+Uruguayan Primera División,URU uruguayan primera división,URU,2015,45,/en/comps/45/2014-2015/2014-2015-Primera-Division-Stats
+Major League Soccer,USA major league soccer,USA,1996,22,/en/comps/22/1996/1996-Major-League-Soccer-Stats
+Venezuelan Primera División,VEN venezuelan primera división,VEN,2015,105,/en/comps/105/2014-2015/2014-2015-Liga-FUTVE-Stats

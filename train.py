@@ -7,21 +7,18 @@ from sklearn.utils import shuffle
 import pandas as pd
 import numpy as np
 
-def training(code, st, acyear) :
-
-    season = 2023
+def training(code) :
 
     try :     # Load training data
         train = pd.read_csv(f'training_data/TRAINING_DATA_COMP{code}.csv')
         print('Loading training data ...')
-        Scraper = scraper(years = [season], code = code, acyear = acyear)
-        _ = Scraper.fit()
+        Scraper = scraper(code = code)
+        _ = Scraper.fit_test()
 
     except :  # If it doesn't exist, scrape it and save it
         print('No training data found ... ')
-        years = np.arange(np.max([1980, st]), season)
-        Scraper = scraper(years = years, code = code, acyear = acyear)
-        train = Scraper.fit()
+        Scraper = scraper(code = code)
+        train = Scraper.fit_train()
         train.to_csv(f'training_data/TRAINING_DATA_COMP{code}.csv', index = None)
         print('Training data built ... ')
 
