@@ -96,6 +96,8 @@ class scraper:
         page = requests.get(url)
         if page.status_code == 429 :
             sys.exit("I'm being rate limited ...")
+        if page.status_code == 500 :
+            sys.exit("The page is not accessible ...")
         soup = BeautifulSoup(page.content, 'lxml') # Create a soup object from the webpage
         if soup.find('table') is not None :
             DATA = self.scrape_year(soup)
@@ -113,6 +115,8 @@ class scraper:
         page = requests.get(url) # Get the webpage
         if page.status_code == 429 :
             sys.exit("I'm being rate limited ...")
+        if page.status_code == 500 :
+            sys.exit("The page is not accessible ...")
         soup = BeautifulSoup(page.content, 'lxml') # Create soup object from the webpage
         table = soup.find('table') # Find the table
         seasons = pd.read_html(str(table))[0] # Create a dataframe from the data
