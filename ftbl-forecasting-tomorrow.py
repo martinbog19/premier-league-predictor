@@ -33,7 +33,7 @@ for code, name, country in zip(competitions['CODE'], competitions['Competition']
 
     # Stop if there are no games scheduled in the upcoming week
     if len(games) == 0 :
-        print(f'No {name} ({country}) games scheduled in the next week ...')
+        print(f'No {name} ({country}) games scheduled tomorrow ...')
 
 
     # PART 3 :   Predict the results of the upcoming games

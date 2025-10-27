@@ -15,7 +15,7 @@ def send(CONTENT, subject = None) :
 
     # Set my email address and the password key
     my_mail  = 'martinbog19@gmail.com'
-    with open('gmail_key.txt') as f:
+    with open('secrets/gmail_app_key.txt') as f:
         password = f.read()
     # Set the subject of the email
     mail['Subject'] = subject
